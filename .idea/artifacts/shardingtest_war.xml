@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="shardingtest:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="shardingtest.war">
+      <element id="artifact" artifact-name="shardingtest:war exploded" />
+    </root>
+  </artifact>
+</component>
