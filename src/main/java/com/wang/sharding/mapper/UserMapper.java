@@ -1,6 +1,7 @@
 package com.wang.sharding.mapper;
 
 import com.wang.sharding.entity.User;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -15,4 +16,6 @@ public interface UserMapper {
     List<User> findAll();
 
     List<User> findByUserIds(List<Integer> userIds);
+
+    List<User> findByUserIdBetween(@Param("startId") int startId, @Param("endId") int endId);
 }

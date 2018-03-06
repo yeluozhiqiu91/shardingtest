@@ -24,6 +24,9 @@
         )
 
     </select>
+    <select id="findByUserIdBetween" resultMap="resultMap">
+        select <include refid="columnsName"/> from t_user where user_id BETWEEN #{startId} AND #{endId}
+    </select>
 
     <sql id="columnsName">
         id,user_id,name,age

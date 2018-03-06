@@ -14,6 +14,8 @@ public interface UserService {
 
     public List<User> findByUserIds(List<Integer> ids);
 
+    public List<User> findByUserIdBetween(int startId,int endId);
+
     public void transactionTestSucess();
 
     public void transactionTestFailure() throws IllegalAccessException;

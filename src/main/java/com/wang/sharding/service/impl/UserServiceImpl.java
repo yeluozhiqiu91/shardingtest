@@ -33,7 +33,19 @@ public class UserServiceImpl implements UserService{
     }
 
     public List<User> findByUserIds(List<Integer> ids) {
-        return userMapper.findByUserIds(ids);
+        List<User> users=userMapper.findByUserIds(ids);
+        if (users==null||users.size()==0){
+            return null;
+        }
+        return users;
+    }
+
+    public List<User> findByUserIdBetween(int startId, int endId) {
+        List<User> users=userMapper.findByUserIdBetween(startId,endId);
+        if (users==null||users.size()==0){
+            return null;
+        }
+        return users;
     }
 
     @Transactional(propagation= Propagation.REQUIRED)
